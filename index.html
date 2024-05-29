@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>React CDN HW</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root" style="padding-left: 20px"></div>
+    <script type="text/babel">
+        const App = () => (
+            <div className='main'>
+                <div>
+                    <h1>Topics covered</h1>
+                </div>
+                <p>The following is a list of all the topics we cover in the MDN learning area.</p>
+                <div>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web" target="_blank">Getting started with the web</a>
+                    <p className='content'>Provides a practical introduction to web development for complete beginners.</p>
+                </div>
+                <div>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML — Structuring the web</a>
+                    <p className='content'>HTML is the language that we use to structure the different parts of our content and define  what their meaning or purpose is. This topic teaches HTML in detail.</p>
+                </div>
+                <div>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS — Styling the web</a>
+                    <p className='content'>CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.</p>
+                </div>
+            </div>
+        );
+
+        ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
